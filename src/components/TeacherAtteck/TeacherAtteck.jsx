@@ -11,7 +11,7 @@ function TeacherAtteck() {
     }
 
     const [atteck, setAtteck] = useState("");
-    setAtteck(atteckArr[1]);
+
     return (
         <>
         <div>

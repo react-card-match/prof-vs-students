@@ -4,12 +4,10 @@ import * as s from "./styles"
 function StudentPart() {
     return (
         <>
-            <div css={s.back}>
-                <div css={s.hp}></div>
-                <div css={s.prdofile}></div>
-                <div css={s.attackBox}>
-                    <StudentAtteck />
-                </div>
+            <div css={s.layout} />
+            <div css={s.statusBar}>
+                <div css={s.hp} />
+                <div css={s.tired} />
             </div>
         </>
     )

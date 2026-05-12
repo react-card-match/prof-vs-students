@@ -1,23 +1,37 @@
+import StudentAtteck from "../components/StudentAtteck/StudentAtteck";
 import StudentPart from "../components/StudentPart/StudentPart";
 import TeacherPart from "../components/TeacherPart/TeacherPart";
 import * as s from "./styles"
 
 
-function MainLayout({children}) {
+function MainLayout({ children }) {
 
     return (
-        
+
         <>
-            <div css={s.back}>
-                <div css={s.student}>
-                    <StudentPart/>
+            <div css={s.layout}>
+                <div css={s.top}>
+                    <div>
+                        <StudentPart />
+                    </div>
+                    <div>
+                        <TeacherPart />
+                    </div>
                 </div>
-                <div css={s.teacher}>
-                    <TeacherPart />
+                <div css={s.bottom}>
+                    <div css={s.battleLog}>
+
+                    </div>
+                    <div css={s.battleStatus}>
+
+                    </div>
+                    <div css={s.userButtons}>
+                        <StudentAtteck />
+                    </div>
                 </div>
             </div>
         </>
-        
+
     )
 }
 
