@@ -4,7 +4,7 @@ import TeacherPart from "../components/TeacherPart/TeacherPart";
 import * as s from "./styles"
 
 
-function MainLayout({ children }) {
+function IngameLayout({ children }) {
 
     return (
 
@@ -35,4 +35,4 @@ function MainLayout({ children }) {
     )
 }
 
-export default MainLayout;
+export default IngameLayout;

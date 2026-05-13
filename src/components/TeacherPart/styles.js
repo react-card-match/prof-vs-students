@@ -44,14 +44,16 @@ export const statusBar = css`
     height: 10%;
 `
 
-export const hp = css`
+export const hp = (hp) => css`
     border: 2px solid #222;
+    width: ${hp}%;
     height: 70%;
     background-color: rgb(255, 28, 28);
 
 `
-export const tired = css`
+export const tired = (tired) => css`
     border: 2px solid #222;
+    width: ${tired}%;
     height: 30%;
     background-color: rgb(196, 51, 240);
 

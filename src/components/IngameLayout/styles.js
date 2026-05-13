@@ -9,6 +9,7 @@ export const layout = css`
     height: 100vh;
     /* overflow: hidden; */
     background-color: #111;
+    overflow: hidden;
 
 
 `

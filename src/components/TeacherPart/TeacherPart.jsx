@@ -6,8 +6,8 @@ function TeacherPart() {
     return (<>
         <div css={s.layout} />
         <div css={s.statusBar}>
-            <div css={s.hp} />
-            <div css={s.tired} />
+            <div css={s.hp()} />
+            <div css={s.tired()} />
         </div>
     </>
     )

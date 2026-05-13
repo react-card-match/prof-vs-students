@@ -1,0 +1,10 @@
+import { css } from "@emotion/react";
+
+export const reset = css`
+    html, body, #root {
+        margin: 0;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+        overflow-y: auto;
+    }
+`;
