@@ -1,36 +1,38 @@
-import StudentAtteck from "../components/StudentAtteck/StudentAtteck";
-import StudentPart from "../components/StudentPart/StudentPart";
-import TeacherPart from "../components/TeacherPart/TeacherPart";
+
+import StatusBar from "../StatusBar/StatusBar";
+import StudentAtteck from "../StudentAtteck/StudentAtteck";
 import * as s from "./styles"
 
 
-function IngameLayout({ children }) {
+function IngameLayout() {
 
-    return (
-
-        <>
-            <div css={s.layout}>
-                <div css={s.top}>
-                    <div>
-                        <StudentPart />
-                    </div>
-                    <div>
-                        <TeacherPart />
-                    </div>
+    return (<>
+        <div css={s.layout}>
+            <div css={s.top}>
+                <div>
+                    <StatusBar />
                 </div>
-                <div css={s.bottom}>
-                    <div css={s.battleLog}>
-
-                    </div>
-                    <div css={s.battleStatus}>
-
-                    </div>
-                    <div css={s.userButtons}>
-                        <StudentAtteck />
-                    </div>
+                <div>
+                    <StatusBar />
                 </div>
             </div>
-        </>
+            <div css={s.bottom}>
+                <div css={s.battleLog}>
+
+                </div>
+                <div css={s.turn}>
+                    <div css={s.turnNum}>
+                        <div>1</div>
+                        TURN
+                    </div>
+                    <div css={s.gameimg}>1</div>
+                </div>
+                <div css={s.userButtons}>
+                    {/* <StudentAtteck /> */}
+                </div>
+            </div>
+        </div>
+    </>
 
     )
 }

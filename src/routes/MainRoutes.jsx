@@ -5,14 +5,13 @@ import Home from "../pages/Home/Home";
 
 function MainRoutes() {
     
-    return
-    <>
+    return (<>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/game/:username" element={<Game />} />
-            {/* <Route path="*" element={"404 에러"} /> */}
+            <Route path="*" element={"404 에러"} />
         </Routes>
-    </>
+    </>)
 }
 
 export default MainRoutes;

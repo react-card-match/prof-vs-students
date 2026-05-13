@@ -1,6 +1,6 @@
 import * as s from "./styles"
 
-function StudentPart() {
+function StatusBar() {
 
 
     return (
@@ -19,4 +19,4 @@ function StudentPart() {
     )
 }
 
-export default StudentPart;
+export default StatusBar;

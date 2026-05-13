@@ -33,10 +33,6 @@ import { css } from "@emotion/react";
 //     background-color: aliceblue;
 // `
 
-export const layout = css`
-
-`
-
 export const statusBar = css`
     box-sizing: border-box;
     border: 2px solid #222;

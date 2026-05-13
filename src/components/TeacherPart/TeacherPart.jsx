@@ -4,7 +4,6 @@ import * as s from "./styles"
 function TeacherPart() {
 
     return (<>
-        <div css={s.layout} />
         <div css={s.statusBar}>
             <div css={s.hp()} />
             <div css={s.tired()} />

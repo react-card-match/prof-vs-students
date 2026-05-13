@@ -24,5 +24,5 @@ export const containerBorder = css`
     border-radius: 6px;
     width: 100%;
     height: 100%;
-    border: 2px solid #00000042;
+    /* border: 2px solid #00000042; */
 `
