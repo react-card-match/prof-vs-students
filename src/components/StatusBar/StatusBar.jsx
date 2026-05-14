@@ -12,8 +12,6 @@ function StatusBar() {
                 <div css={s.tiredBackBar}>
                     <div css={s.tired()} />
                 </div>
-
-
             </div>
         </>
     )
