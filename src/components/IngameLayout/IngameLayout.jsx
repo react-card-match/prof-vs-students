@@ -3,41 +3,45 @@ import { useEffect, useState } from "react";
 import StatusBar from "../StatusBar/StatusBar";
 import * as s from "./styles"
 import UserController from "../UserController/UserController";
+import ReactModal from "react-modal";
 
 
 function IngameLayout() {
 
-    const [studentStatusBar, setStudentSatausBar] = useState({
-        id: "student",
+    const [userStatusBar, setUserSatausBar] = useState({
+        id: "user",
         hp: 100,
         tired: 0,
     });
-    const [teacherStatusBar, setTeacherSatausBar] =useState({
-        id: "teacher",
+    const [enemyStatusBar, setEnemySatausBar] = useState({
+        id: "enemy",
         hp: 100,
         tired: 0,
     });
 
 
 
-    const [num, setNum] = useState(0);
-    
+    const [turnNum, setTurnNum] = useState(0);
+    const [modalOpen, setModalOpen] = useState(false);
+
 
     return (<>
         <div css={s.layout}>
             <div css={s.top} >
                 <div css={s.part}>
                     <div css={s.back} >
-                        <div css={s.profile} >
-                        </div>
+                        <div>가나다</div>
                     </div>
-                    <StatusBar status={studentStatusBar}/>
+                    <StatusBar status={userStatusBar} />
                 </div>
+
+                <p css={s.VSmark}>vs</p>
+
                 <div css={s.part}>
                     <div css={s.back}>
-                        <div css={s.profile} />
+                        <div>가나다</div>
                     </div>
-                    <StatusBar status={teacherStatusBar} />
+                    <StatusBar status={enemyStatusBar} />
                 </div>
             </div>
             <div css={s.bottom}>
@@ -45,14 +49,14 @@ function IngameLayout() {
                     fds
                 </div>
                 <div css={s.turn}>
-                    <div css={s.turnNum}>
-                        <div>{num}</div>
+                    <div css={s.turnNumb}>
+                        <div>{turnNum}</div>
                         TURN
                     </div>
                     <div css={s.gameimg}>1</div>
                 </div>
                 <div css={s.userButtons}>
-                    <UserController num={num} setNum={setNum}/>
+                    <UserController turnNum={turnNum} setTurnNum={setTurnNum} modalOpen={modalOpen} setModalOpen={setModalOpen} />
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { css } from "@emotion/react"
 import image from "../../img/backgroundDown.png"
+
 export const layout = css`
     display: flex;
     flex-direction: column;
@@ -8,11 +9,8 @@ export const layout = css`
     border-radius: 8px;
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
     background-color: #111;
     overflow: hidden;
-
-
 `
 
 export const top = css`
@@ -39,49 +37,56 @@ export const top = css`
     }
 `;
 
+export const VSmark = css`
+    font-size: 100px;
+    font-weight: 900;
+    background: linear-gradient(
+        to bottom,
+        #fff,
+        #ffcc00 40%,
+        #aa5500 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.8));
+    letter-spacing: 5px;
+`
+
 export const part = css`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    gap: 45px;
     
 `;
-// export const profile = css`
-//     /* position: absolute; */
-//     margin-bottom: 20px;
-//     box-shadow: 0 0 20px #222;
-//     width: 100%;
-//     height: 80%;
-//     background-color: #dbdbdb;
-    
-    
-// `;
+
 export const back = css`
     /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+    box-shadow: inset 0 0 5px #000000, 0 0 10px #000000;
 
-    width: 100%;
-    height: 80%;
-    background-color: yellow;
+
+    width: 280px;
+    height: 380px;
+    background-color: #ecc953;
 
     & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
         background-color: white;
         border-radius: 6px;
         width: 90%;
         height: 90%;
-        box-shadow: 0 0 10px #000000;
+        box-shadow: inset 0 0 5px #000000, 0 0 10px #000000;
         text-align: center;
-        
-
     }
 `
-
-
-
-
 
 export const bottom = css`
     flex: 3;
@@ -125,7 +130,7 @@ export const turn = css`
     background-color: #00000000;
 `
 
-export const turnNum = css`
+export const turnNumb = css`
     display: flex;
     flex-direction: column;
     justify-content: center;
