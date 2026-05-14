@@ -11,7 +11,11 @@ function TeacherAtteck() {
     }
 
     const [atteck, setAtteck] = useState("");
+<<<<<<< HEAD
     // setAtteck(atteckArr[1]);
+=======
+
+>>>>>>> origin/design
     return (
         <>
         <div>

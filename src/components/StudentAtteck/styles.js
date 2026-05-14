@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 export const buttons = css`
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
@@ -15,9 +16,9 @@ export const button = css`
     box-sizing: border-box;
     margin: 10px;
 
-    width: 20%;
-    height: 10%;
+    width: 45%;
+    height: 40%;
 
-    font-size: 100px;
+    font-size: 30px;
     
 `
