@@ -9,7 +9,7 @@ export const statusBar = css`
     gap:3px;
     width: 100%;
     height: 10%;
-    box-shadow: 0 0 15px #070202;
+    box-shadow: 0 0 15px 5px rgb(51, 51, 51);
 
     & > div {
         box-sizing: border-box;
