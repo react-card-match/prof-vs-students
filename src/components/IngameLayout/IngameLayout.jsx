@@ -3,15 +3,18 @@ import { useEffect, useState } from "react";
 import StatusBar from "../StatusBar/StatusBar";
 import * as s from "./styles"
 import UserController from "../UserController/UserController";
-import ReactModal from "react-modal";
+import ModalLayout from "../UserController/ModalLayout/ModalLayout";
 
 
 function IngameLayout() {
 
-    const [userStatusBar, setUserSatausBar] = useState({
+    const [userStatus, setUserStatus] = useState({
         id: "user",
         hp: 100,
         tired: 0,
+        action: ["공격", "스킬", "포션", "조퇴"],
+        skillOn: false,
+        skills: ["질문한다", "수강생", "집중한다", "대답한다"],
     });
     const [enemyStatusBar, setEnemySatausBar] = useState({
         id: "enemy",
@@ -27,12 +30,13 @@ function IngameLayout() {
 
     return (<>
         <div css={s.layout}>
+            <ModalLayout modalOpen={modalOpen} setModalOpen={setModalOpen} userStatus={userStatus} setUserStatus={setUserStatus} />
             <div css={s.top} >
                 <div css={s.part}>
                     <div css={s.back} >
                         <div>가나다</div>
                     </div>
-                    <StatusBar status={userStatusBar} />
+                    <StatusBar status={userStatus} />
                 </div>
 
                 <p css={s.VSmark}>vs</p>
@@ -56,7 +60,7 @@ function IngameLayout() {
                     <div css={s.gameimg}>1</div>
                 </div>
                 <div css={s.userButtons}>
-                    <UserController turnNum={turnNum} setTurnNum={setTurnNum} modalOpen={modalOpen} setModalOpen={setModalOpen} />
+                    <UserController turnNum={turnNum} setTurnNum={setTurnNum} modalOpen={modalOpen} setModalOpen={setModalOpen} userStatus={userStatus} setUserStatus={setUserStatus} />
                 </div>
             </div>
         </div>
