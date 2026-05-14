@@ -1,6 +1,5 @@
 
 import StatusBar from "../StatusBar/StatusBar";
-import StudentAtteck from "../StudentAtteck/StudentAtteck";
 import * as s from "./styles"
 
 
@@ -28,7 +27,6 @@ function IngameLayout() {
                     <div css={s.gameimg}>1</div>
                 </div>
                 <div css={s.userButtons}>
-                    {/* <StudentAtteck /> */}
                 </div>
             </div>
         </div>
