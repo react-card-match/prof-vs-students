@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-
+import image from "../../img/backgroundDown.png"
 export const layout = css`
     display: flex;
     flex-direction: column;
@@ -22,6 +22,11 @@ export const top = css`
     align-items: center;
     background-color: #ffffff;
 
+    background-image: url(${image});
+    background-size : contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
     & > div {
         display: flex;
         flex-direction: column;
@@ -34,24 +39,48 @@ export const top = css`
     }
 `;
 
-// export const student = css`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 300px;
-//     height: 100%;
-//     background-color: #940202;
+export const part = css`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+`;
+// export const profile = css`
+//     /* position: absolute; */
+//     margin-bottom: 20px;
+//     box-shadow: 0 0 20px #222;
+//     width: 100%;
+//     height: 80%;
+//     background-color: #dbdbdb;
+    
+    
 // `;
+export const back = css`
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
 
-// export const teacher = css`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 300px;
-//     height: 300px;
-//     background-color: #00503c;
+    width: 100%;
+    height: 80%;
+    background-color: yellow;
 
-// `;
+    & > div {
+        background-color: white;
+        border-radius: 6px;
+        width: 90%;
+        height: 90%;
+        box-shadow: 0 0 10px #000000;
+        text-align: center;
+        
+
+    }
+`
+
+
+
 
 
 export const bottom = css`

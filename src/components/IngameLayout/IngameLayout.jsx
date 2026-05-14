@@ -25,11 +25,18 @@ function IngameLayout() {
 
     return (<>
         <div css={s.layout}>
-            <div css={s.top}>
-                <div>
+            <div css={s.top} >
+                <div css={s.part}>
+                    <div css={s.back} >
+                        <div css={s.profile} >
+                        </div>
+                    </div>
                     <StatusBar status={studentStatusBar}/>
                 </div>
-                <div>
+                <div css={s.part}>
+                    <div css={s.back}>
+                        <div css={s.profile} />
+                    </div>
                     <StatusBar status={teacherStatusBar} />
                 </div>
             </div>
