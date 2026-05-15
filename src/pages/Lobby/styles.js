@@ -1,9 +1,10 @@
 
 import { css } from "@emotion/react";
-export const back = css`
+export const layout = css`
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    background-color: #dbdbdb;
     
     & > header {
         flex: 0 0 20%;
@@ -19,9 +20,10 @@ export const back = css`
     
 `
 export const infoPlayStor = css`
-    
 
+    height: 100%;
     width: 100%;
+    background-color: white;
     
     & > div {
          display: flex;
