@@ -8,7 +8,7 @@ import ModalLayout from "../UserController/ModalLayout/ModalLayout";
 
 function IngameLayout() {
 
-    const emermy = "강사님";
+    const enemy = "강사님";
     const [userStatus, setUserStatus] = useState({
         id: "user",
         hp: 100,
@@ -44,7 +44,7 @@ function IngameLayout() {
 
                 <div css={s.part}>
                     <div css={s.back}>
-                        <div>{emermy}</div>
+                        <div>{enemy}</div>
                     </div>
                     <StatusBar status={enemyStatusBar} />
                 </div>
@@ -58,7 +58,9 @@ function IngameLayout() {
                         <div>{turnNum}</div>
                         TURN
                     </div>
-                    <div css={s.gameimg}>1</div>
+                    <div css={s.gameimg}>
+                        <div></div>
+                    </div>
                 </div>
                 <div css={s.userButtons}>
                     <UserController turnNum={turnNum} setTurnNum={setTurnNum} modalOpen={modalOpen} setModalOpen={setModalOpen} userStatus={userStatus} setUserStatus={setUserStatus} />
