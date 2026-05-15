@@ -6,7 +6,6 @@ import { useState } from "react";
 function ModalLayout({ modalOpen, setModalOpen, userStatus, setUserStatus }) {
 
     const { id, hp, tired, action, skillOn, skills } = userStatus;
-
     const [getPick, setGetPick] = useState();
 
     const handlePickOnClick = (e) => {

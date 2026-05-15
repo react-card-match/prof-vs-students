@@ -1,5 +1,6 @@
 import { css } from "@emotion/react"
 import image from "../../img/backgroundDown.png"
+import cardimg from "../../img/card-back.png"
 
 export const layout = css`
     display: flex;
@@ -150,4 +151,34 @@ export const gameimg = css`
     align-items: center;
     width: 100%;
     flex-grow: 1;
+
+
+
+`
+
+export const card = (isClick, setIsClick) => css`
+
+    width: 100%;
+    height: 100%;
+    background-image: url(${cardimg});
+    background-repeat: no-repeat;
+    /* object-fit: scale-down; */
+    background-position: center;
+    background-size: contain;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    transform:${isClick ? "rotateY(720deg)"  : "rotateY(0deg)"};
+    /* &:hover {
+        transform: scale(1.05);
+    } */
+
+    /* &:active {
+        /* transform: scale(0.95); */
+        /* transform: rotateY(1080deg);
+
+    } */ 
+        //클릭하면 뺑글뺑글 돌다가 커지면서 모달하기
+
+
+
 `
