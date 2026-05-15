@@ -8,6 +8,7 @@ import ModalLayout from "../UserController/ModalLayout/ModalLayout";
 
 function IngameLayout() {
 
+    const emermy = "강사님";
     const [userStatus, setUserStatus] = useState({
         id: "user",
         hp: 100,
@@ -43,7 +44,7 @@ function IngameLayout() {
 
                 <div css={s.part}>
                     <div css={s.back}>
-                        <div>가나다</div>
+                        <div>{emermy}</div>
                     </div>
                     <StatusBar status={enemyStatusBar} />
                 </div>
