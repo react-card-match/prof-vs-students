@@ -11,7 +11,7 @@ function StatusBar({status}) {
                     <div css={s.hp(hp)} />
                 </div>
                 {
-                    id === "enemy" &&
+                    id === "강사님" &&
                     (<div css={s.tiredBackBar}>
                         <div css={s.tired(tired)} />
                     </div>) 

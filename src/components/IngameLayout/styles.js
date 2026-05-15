@@ -156,7 +156,7 @@ export const gameimg = css`
 
 `
 
-export const card = (isClick, setIsClick) => css`
+export const card = (isClick) => css`
 
     width: 100%;
     height: 100%;
@@ -165,7 +165,7 @@ export const card = (isClick, setIsClick) => css`
     /* object-fit: scale-down; */
     background-position: center;
     background-size: contain;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     transition: all 0.5s ease-in-out;
     transform:${isClick ? "rotateY(720deg)"  : "rotateY(0deg)"};
     /* &:hover {
