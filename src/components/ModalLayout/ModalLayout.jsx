@@ -6,7 +6,9 @@ import usePotions from "../../controller/usePotions";
 
 function ModalLayout({ modalOpen, setModalOpen, userActions, setUserActions }) {
 
-    const { action, skillOn, skills, potionOn, potions } = userActions;
+
+    const { action, skillOn, skills, potionOn, potions, cardOn, cards } = userActions;
+
 
 
 
@@ -15,7 +17,7 @@ function ModalLayout({ modalOpen, setModalOpen, userActions, setUserActions }) {
         modalTarget: "",
     });
 
-
+    console.log(cards);
 
     const handlePickOnClick = (e) => {
         setGetPick(prev => ({
@@ -52,15 +54,17 @@ function ModalLayout({ modalOpen, setModalOpen, userActions, setUserActions }) {
             ...prev,
             skillOn: false,
             potionOn: false,
+            cardOn: false,
         }))
     }
 
     useEffect(() => {
-        if (skillOn && potionOn) {          // skillOn 과 potionOn 이 둘다 true 이면 둘다 false로 변환
+        if (skillOn && potionOn && cardOn) {          // skillOn 과 potionOn 이 둘다 true 이면 둘다 false로 변환
             setUserActions(prev => ({
                 ...prev,
                 skillOn: false,
                 potionOn: false,
+                cardOn: false,
             }));
 
             setModalOpen(false);
@@ -85,8 +89,17 @@ function ModalLayout({ modalOpen, setModalOpen, userActions, setUserActions }) {
             setModalOpen(true);
         }
 
+        if (cardOn) {                      // cardOn true 일 때 Modal 대상을 card으로 지정
+            setGetPick(prev => ({
+                ...prev,
+                modalTarget: "card",
+            }));
 
-    }, [skillOn, potionOn])
+            setModalOpen(true);
+        }
+
+
+    }, [skillOn, potionOn, cardOn])
 
     return (
         <>
@@ -117,6 +130,15 @@ function ModalLayout({ modalOpen, setModalOpen, userActions, setUserActions }) {
                                 onClick={handlePickOnClick}
                             >
                                 {potion}
+                            </div>)
+                        }
+                        {
+                            getPick.modalTarget === "card" &&
+                            cards.map(card => <div id={card}
+                                css={getPick.getPickTarget === card ? s.modalTabPick : s.modalTab}
+                                onClick={handlePickOnClick}
+                            >
+                                {card}
                             </div>)
                         }
                     </div>

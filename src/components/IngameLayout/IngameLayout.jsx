@@ -11,6 +11,7 @@ import { useParams } from "react-router";
 function IngameLayout() {
     const [turnNum, setTurnNum] = useState(0);
     const [modalOpen, setModalOpen] = useState(false);
+    const [modalCardOpen, setModalCardOpen] = useState(false);
     const [isClick, setIsClick] = useState(false);
     
     const [userActions, setUserActions] = useState({
@@ -19,7 +20,10 @@ function IngameLayout() {
         skills: ["질문한다", "수강생", "집중한다", "대답한다"],
         potionOn: false,
         potions: ["커피", "핫식스", "몬스터"],
+        cardOn: false,                                              //
+        cards: ["반장카드", "동기카드"],                                //
     });
+    const [selectCard, setSlectCard] = useState("");
 
     const [enemyStatusBar, setEnemySatausBar] = useState({
         id: "강사님",
@@ -36,28 +40,35 @@ function IngameLayout() {
     }
 
 
-    const handleOnClick = () => {
+    const handleCardOnClick = () => {
         console.log("클릭됨");
         setIsClick(true);
+        setUserActions(prev => ({
+            ...prev,
+            cardOn: true,
+        }))
         setTimeout(() => {
             setIsClick(false);
+            
         },[400])
+        // setTimeout(() => {
+        //     setModalOpen(true);
+
+        // },[600])
+
+
+
     }
 
-            <ReactModal>
-                
-
-                <div>반장카드</div>
-                <div>동기카드</div>
-
-            </ReactModal>
+           
 
 
 
-
-    return (<>
+    return (
+    <>
         <div css={s.layout}>
             <ModalLayout modalOpen={modalOpen} setModalOpen={setModalOpen} userActions={userActions} setUserActions={setUserActions} />
+            {/* <ModalLayout modalOpen={modalCardOpen} setModalOpen={setModalCardOpen} userActions={selectCard} setUserActions={setSlectCard} value={"card"} /> */}
             <div css={s.top} >
                 <div css={s.part}>
                     <div css={s.back} >
@@ -85,7 +96,7 @@ function IngameLayout() {
                         TURN
                     </div>
                     <div css={s.gameimg}>
-                        <div css={s.card(isClick)} onClick={handleOnClick}></div>
+                        <div css={s.card(isClick)} onClick={handleCardOnClick}></div>
                     </div>
                 </div>
                 <div css={s.userButtons}>

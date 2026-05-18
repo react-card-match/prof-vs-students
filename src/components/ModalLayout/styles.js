@@ -121,3 +121,8 @@ export const modalTabPick = css`
     background-color: #b44b28;
     transform: scale(105%);
 `
+
+export const modalCard = css`
+    display: flex;
+    flex-direction: row;
+`
